@@ -9,9 +9,11 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
   <body>
+    <!-- Jumbotron starts here -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4 text-center">Weather Dashboard</h1>
@@ -20,14 +22,29 @@
         </p>
       </div>
     </div>
-    <div class="input-group mb-3 pl-2">
-      <input id="city-name" type="text" />
-      <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" id="search">
-          Search
-        </button>
+    <!-- Jumbotron ends here -->
+    <!-- Aside starts here -->
+    <aside class="py-4">
+      <div id="aside" class="container input-group mb-3 pl-2 float-left">
+        <input id="city-name" type="text" />
+        <div class="input-group-append">
+          <button class="btn btn-secondary rounded" type="button" id="search">
+            Search
+          </button>
+        </div>
+        <div id="buttons"></div>
       </div>
-    </div>
+    </aside>
+
+    <!-- Main starts here -->
+
+    <main>
+      <div id="main" class="container">
+        <div id="weather-info"></div>
+      </div>
+      <div id="forecast"></div>
+    </main>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.js"
       integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
