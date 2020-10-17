@@ -3,7 +3,6 @@ var searchedCities = [];
 function buildQuery() {
   var APIkey = "6384891c94809a3c5a57868fd8ab6033";
   var $cityName = $("#city-name").val().trim();
-
   var queryURL =
     "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=" +
     $cityName +
@@ -36,7 +35,7 @@ function renderButton() {
   $("#buttons").empty();
 
   var cities = JSON.parse(localStorage.getItem("searchCities"));
-  searchedCities = cities;
+
   if (cities !== null) {
     searchedCities = cities;
     for (var i = 0; i < searchedCities.length; i++) {
@@ -64,6 +63,6 @@ function displayInfo(response) {
     .appendTo("#weather-info");
 }
 
-$("btn-primary").on("click", function () {
-  alert("hi");
-});
+// $("btn-primary").on("click", function () {
+//   alert("hi");
+// });
