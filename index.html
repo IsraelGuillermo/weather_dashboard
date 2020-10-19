@@ -24,24 +24,20 @@
     </div>
     <!-- Jumbotron ends here -->
     <!-- Aside starts here -->
-    <aside class="py-4">
-      <div id="aside" class="container input-group mb-3 pl-2 float-left">
+    <aside class="float-left">
+      <div class="pl-2">
         <input id="city-name" type="text" />
-        <div class="input-group-append">
-          <button class="btn btn-secondary rounded" type="button" id="search">
-            Search
-          </button>
-        </div>
-        <div id="buttons"></div>
+        <button class="btn btn-secondary rounded" type="button" id="search">
+          Search
+        </button>
       </div>
+      <div id="buttons" class="pl-2 mt-2"></div>
     </aside>
 
     <!-- Main starts here -->
 
-    <main>
-      <div id="main" class="container">
-        <div id="weather-info"></div>
-      </div>
+    <main class="float-right">
+      <div id="main" class="container"></div>
       <div id="forecast"></div>
     </main>
 

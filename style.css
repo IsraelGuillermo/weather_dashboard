@@ -1,0 +1,22 @@
+.card {
+  width: 18%;
+  height: 10rem;
+  background-color: red;
+}
+
+.weatherInfo {
+  width: 100%;
+  height: 20rem;
+  background-color: teal;
+}
+
+.btn-primary {
+  display: block;
+  width: 16rem;
+}
+main {
+  width: 75%;
+}
+aside {
+  width: 25%;
+}
