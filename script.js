@@ -8,7 +8,7 @@ var APIkey = "6384891c94809a3c5a57868fd8ab6033";
 function buildQuery() {
   var $cityName = $("#city-name").val().trim();
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=" +
+    "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" +
     $cityName +
     "&appid=" +
     APIkey;
@@ -19,7 +19,7 @@ function buildForecastquery() {
   var $cityName = $("#city-name").val().trim();
 
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" +
     $cityName +
     "&appid=" +
     APIkey;
