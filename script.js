@@ -26,8 +26,10 @@ function buildForecastquery() {
   return queryURL;
 }
 // When search is done, this function gets information back from openweather API
+
 $("#search").on("click", function () {
   event.preventDefault();
+
   var queryURL = buildQuery();
   $.ajax({
     url: queryURL,
