@@ -54,7 +54,7 @@ function generateForecast(response) {
     if (i % 8 === 0) {
       function generateImg(response) {
         var icon = response.list[i].weather[0].icon;
-        var imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+        var imageURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         return imageURL;
       }
       var imgUrl = generateImg(response);
