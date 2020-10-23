@@ -111,7 +111,7 @@ function displayInfo(response) {
   $("#main").empty();
   function generateImg(response) {
     var icon = response.weather[0].icon;
-    var imageURL = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
+    var imageURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
     return imageURL;
   }
   var imgUrl = generateImg(response);
@@ -139,7 +139,7 @@ function displayInfo(response) {
 
 function UV(lat, lon) {
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+    "https://api.openweathermap.org/data/2.5/uvi?lat=" +
     lat +
     "&lon=" +
     lon +
@@ -175,7 +175,7 @@ $(".btn-primary").on("click", function () {
   var APIkey = "6384891c94809a3c5a57868fd8ab6033";
   var $cityName = $(this).text();
   var queryURL =
-    "http://api.openweathermap.org/data/2.5/weather?units=imperial&q=" +
+    "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" +
     $cityName +
     "&appid=" +
     APIkey;
@@ -185,7 +185,7 @@ $(".btn-primary").on("click", function () {
     method: "GET",
   }).then(displayInfo);
   var queryURL2 =
-    "http://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" +
     $cityName +
     "&appid=" +
     APIkey;
