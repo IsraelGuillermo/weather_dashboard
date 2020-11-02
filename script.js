@@ -6,7 +6,7 @@ var APIkey = "6384891c94809a3c5a57868fd8ab6033";
 
 // This function builds the URL query for current weather
 function buildQuery() {
-  var $cityName = $("#city-name").val().trim();
+  var $cityName = $("#city-name").val().trim().toLowerCase();
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?units=imperial&q=" +
     $cityName +
@@ -16,7 +16,7 @@ function buildQuery() {
 }
 // This function builds URL query for forecast information
 function buildForecastquery() {
-  var $cityName = $("#city-name").val().trim();
+  var $cityName = $("#city-name").val().trim().toLowerCase();
 
   var queryURL =
     "https://api.openweathermap.org/data/2.5/forecast?units=imperial&q=" +
@@ -81,11 +81,17 @@ renderButton();
 
 // Function saves searched cities to local storage
 function saveCities() {
-  var citySearched = $("#city-name").val().trim();
-  var cities = {
-    city: citySearched,
-  };
-  searchedCities.push(cities);
+  var citySearched = $("#city-name")
+    .val()
+    .trim()
+    .toLowerCase()
+    .split(" ")
+    .map((str) => str.charAt(0).toUpperCase() + str.substring(1))
+    .join(" ");
+
+  if (!searchedCities.includes(citySearched)) {
+    searchedCities.push(citySearched);
+  }
   localStorage.setItem("searchCities", JSON.stringify(searchedCities));
 }
 
@@ -99,7 +105,7 @@ function renderButton() {
     searchedCities = cities;
     for (var i = 0; i < searchedCities.length; i++) {
       $("<button>")
-        .text(searchedCities[i].city)
+        .text(searchedCities[i])
         .addClass("btn btn-primary mb-2")
         .prependTo("#buttons");
     }
