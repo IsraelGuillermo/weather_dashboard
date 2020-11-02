@@ -129,7 +129,7 @@ function displayInfo(response) {
   $("<img>").attr("src", imgUrl).appendTo("#main");
 
   $("<p>")
-    .text("Temperatue: " + Math.floor(response.main.temp) + " °F")
+    .text("Temperature: " + Math.floor(response.main.temp) + " °F")
     .appendTo("#main");
   $("<p>")
     .text("Humidity: " + response.main.humidity + " %")
